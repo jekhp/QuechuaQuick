@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import { Providers } from '@/components/providers';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
+import { LanguageProvider } from '@/contexts/language-context';
 
 export const metadata: Metadata = {
-  title: 'QuechuaQuick | Habla Quechua en 2 minutos',
-  description: 'Frases clave para conectar con los Andes. Una cheat sheet minimalista para turistas con frases útiles, audio y música.',
+  title: 'QuechuaQuick | Speak Quechua in 2 minutes',
+  description: 'Key phrases to connect with the Andes. A minimalist cheat sheet for tourists with useful phrases, audio, and music.',
 };
 
 export default function RootLayout({
@@ -24,10 +25,12 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        <Providers>
-          {children}
-          <Toaster />
-        </Providers>
+        <LanguageProvider>
+          <Providers>
+            {children}
+            <Toaster />
+          </Providers>
+        </LanguageProvider>
       </body>
     </html>
   );

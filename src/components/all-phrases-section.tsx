@@ -6,9 +6,31 @@ import PhraseCard from '@/components/phrase-card';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useLanguage } from '@/contexts/language-context';
+import { translations } from '@/lib/translations';
 
 export default function AllPhrasesSection() {
   const [activeFilter, setActiveFilter] = useState('Todo');
+  const { language } = useLanguage();
+  const t = translations[language].allPhrases;
+
+  const translatedCategories = phraseCategories.map(category => {
+    if (category === 'Todo') return t.filterAll;
+    if (category === 'Saludos') return t.filterGreetings;
+    if (category === 'Comida') return t.filterFood;
+    if (category === 'Cortesía') return t.filterCourtesy;
+    if (category === 'General') return t.filterGeneral;
+    return category;
+  });
+
+  const handleFilterClick = (englishCategory: string) => {
+    if (englishCategory === 'All') {
+      setActiveFilter('Todo');
+    } else {
+      setActiveFilter(englishCategory);
+    }
+  }
+
 
   const filteredPhrases = activeFilter === 'Todo'
     ? phrases
@@ -20,14 +42,14 @@ export default function AllPhrasesSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-              🗣️ Frases para cada Ocasión
+              {t.title}
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Filtra por categoría y encuentra justo lo que necesitas decir.
+              {t.subtitle}
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-2 pt-6">
-            {phraseCategories.map(category => (
+            {phraseCategories.map((category, index) => (
               <Button
                 key={category}
                 variant="outline"
@@ -37,9 +59,9 @@ export default function AllPhrasesSection() {
                     ? 'bg-accent text-accent-foreground border-accent hover:bg-accent/90'
                     : 'bg-transparent text-foreground hover:bg-accent/10 hover:border-accent'
                 )}
-                onClick={() => setActiveFilter(category)}
+                onClick={() => handleFilterClick(category)}
               >
-                {category}
+                {translatedCategories[index]}
               </Button>
             ))}
           </div>
@@ -61,7 +83,7 @@ export default function AllPhrasesSection() {
               ))
             ) : (
               <div className="col-span-full text-center text-muted-foreground py-10">
-                <p>No se encontraron frases. Prueba otra categoría.</p>
+                <p>{t.noPhrases}</p>
               </div>
             )}
           </AnimatePresence>

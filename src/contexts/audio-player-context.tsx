@@ -1,6 +1,8 @@
 'use client';
 import { createContext, useState, useRef, useCallback, ReactNode, useContext, useEffect } from 'react';
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from './language-context';
+import { translations } from '@/lib/translations';
 
 interface AudioPlayerContextType {
   toggleAudio: (src: string) => void;
@@ -23,6 +25,8 @@ export const AudioPlayerProvider = ({ children }: { children: ReactNode }) => {
   const [activeAudioSrc, setActiveAudioSrc] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const { toast } = useToast();
+  const { language } = useLanguage();
+  const t = translations[language].audioPlayer;
 
   const toggleAudio = useCallback((src: string) => {
     if (audioRef.current && activeAudioSrc === src) {
@@ -43,8 +47,8 @@ export const AudioPlayerProvider = ({ children }: { children: ReactNode }) => {
 
       newAudio.addEventListener('error', () => {
         toast({
-          title: "Error de audio",
-          description: "El audio no está disponible en este momento.",
+          title: t.errorTitle,
+          description: t.errorDescription,
           variant: "destructive",
         })
         setActiveAudioSrc(null);
@@ -59,8 +63,8 @@ export const AudioPlayerProvider = ({ children }: { children: ReactNode }) => {
         }).catch(error => {
           console.error("Audio playback failed:", error);
           toast({
-            title: "Error de audio",
-            description: "No se pudo reproducir el audio.",
+            title: t.errorTitle,
+            description: t.playError,
             variant: "destructive",
           })
           setActiveAudioSrc(null);
@@ -79,7 +83,7 @@ export const AudioPlayerProvider = ({ children }: { children: ReactNode }) => {
         setIsPlaying(true);
       };
     }
-  }, [activeAudioSrc, toast]);
+  }, [activeAudioSrc, toast, t]);
 
   useEffect(() => {
     const audio = audioRef.current;

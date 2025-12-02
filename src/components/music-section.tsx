@@ -8,9 +8,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import VideoModal from './video-modal';
 import { PlayCircle } from 'lucide-react';
+import { useLanguage } from '@/contexts/language-context';
+import { translations } from '@/lib/translations';
 
 export default function MusicSection() {
   const [selectedVideo, setSelectedVideo] = useState<MusicVideo | null>(null);
+  const { language } = useLanguage();
+  const t = translations[language].music;
 
   return (
     <>
@@ -19,10 +23,10 @@ export default function MusicSection() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-                🎵 El Ritmo de los Andes
+                {t.title}
               </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Sumérgete en la cultura quechua a través de su música.
+                {t.subtitle}
               </p>
             </div>
           </div>

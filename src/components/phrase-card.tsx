@@ -7,6 +7,8 @@ import { Play, Pause } from 'lucide-react';
 import type { Phrase } from '@/lib/data';
 import AudioWave from './audio-wave';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/contexts/language-context';
+import { translations } from '@/lib/translations';
 
 interface PhraseCardProps {
   phrase: Phrase;
@@ -15,6 +17,10 @@ interface PhraseCardProps {
 export default function PhraseCard({ phrase }: PhraseCardProps) {
   const { toggleAudio, activeAudioSrc, isPlaying } = useAudioPlayer();
   const isThisAudioPlaying = activeAudioSrc === phrase.audioSrc && isPlaying;
+  const { language } = useLanguage();
+  const t = translations[language].phraseCard;
+
+  const translation = language === 'es' ? phrase.translation.es : phrase.translation.en;
 
   return (
     <Card className="group flex h-full transform flex-col justify-between text-center transition-all duration-250 ease-out hover:-translate-y-1 hover:shadow-lg motion-reduce:transform-none">
@@ -26,7 +32,7 @@ export default function PhraseCard({ phrase }: PhraseCardProps) {
           </p>
           <p className="text-sm italic text-accent">({phrase.pronunciation})</p>
         </div>
-        <p className="text-base font-semibold text-foreground">{phrase.translation}</p>
+        <p className="text-base font-semibold text-foreground">{translation}</p>
       </CardContent>
       <div className="px-6 pb-6">
         <Button
@@ -37,7 +43,7 @@ export default function PhraseCard({ phrase }: PhraseCardProps) {
             isThisAudioPlaying && 'bg-secondary'
           )}
           onClick={() => toggleAudio(phrase.audioSrc)}
-          aria-label={`Reproducir audio de ${phrase.quechua}`}
+          aria-label={`${t.playAudio} ${phrase.quechua}`}
         >
           {isThisAudioPlaying ? (
             <div className="relative flex h-full w-full items-center justify-center">
