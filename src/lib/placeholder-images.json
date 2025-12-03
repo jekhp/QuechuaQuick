@@ -5,36 +5,6 @@
       "description": "Andean landscape with smiling people",
       "imageUrl": "https://images.unsplash.com/photo-1575113029377-ed59774895c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhbmRlYW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzY0NzE1Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "andean landscape"
-    },
-    {
-      "id": "video1",
-      "description": "Tusurikusun by Damaris",
-      "imageUrl": "https://images.unsplash.com/photo-1567981964169-7c2597346322?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbmRlYW4lMjBtdXNpY3xlbnwwfHx8fDE3NjQ3MTU2OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "andean music"
-    },
-    {
-      "id": "video2",
-      "description": "Tijeras by Renata Flores",
-      "imageUrl": "https://images.unsplash.com/photo-1517230878791-4d28214057c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHNpbmdpbmd8ZW58MHx8fHwxNzY0NzE1Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman singing"
-    },
-    {
-      "id": "video3",
-      "description": "Kachikachicha by Coro Arpegio",
-      "imageUrl": "https://images.unsplash.com/photo-1745852737143-a8b275407f2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGlsZHJlbiUyMGNob2lyfGVufDB8fHx8MTc2NDcxNTY5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "children choir"
-    },
-    {
-      "id": "video4",
-      "description": "Ananau by Alborada",
-      "imageUrl": "https://images.unsplash.com/photo-1753921154469-acc550728643?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhbmRlYW4lMjBpbnN0cnVtZW50c3xlbnwwfHx8fDE3NjQ3MTU2OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "andean instruments"
-    },
-    {
-      "id": "video5",
-      "description": "Kaypachamanta by Liberato Kani",
-      "imageUrl": "https://images.unsplash.com/photo-1668749094956-99a1961d6aee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjByYXBwaW5nfGVufDB8fHx8MTc2NDcxNTY5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man rapping"
     }
   ]
 }

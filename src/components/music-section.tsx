@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { musicVideos, type MusicVideo } from '@/lib/data';
-import { getPlaceholderImage } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import VideoModal from './video-modal';
@@ -43,11 +42,10 @@ export default function MusicSection() {
                   >
                     <CardContent className="relative aspect-video p-0">
                       <Image
-                        src={getPlaceholderImage(video.thumbnailId)}
+                        src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
                         alt={`Thumbnail for ${video.title}`}
                         fill
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        data-ai-hint="andean music"
                       />
                       <div className="absolute inset-0 bg-black/20 transition-all duration-300 group-hover:bg-black/50"></div>
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
