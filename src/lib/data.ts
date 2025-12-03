@@ -42,12 +42,13 @@ export type MusicVideo = {
   youtubeId: string;
   title: string;
   artist: string;
+  startTime?: number;
 };
 
 export const musicVideos: MusicVideo[] = [
   { id: 1, youtubeId: 'viPKKHGdwHQ', title: 'Carnaval Despedida', artist: 'Roger Chino' },
   { id: 2, youtubeId: '58NMMld4gsk', title: 'Carnaval Solteritas', artist: 'Yeritza Corazon' },
-  { id: 3, youtubeId: 'Jm7e3nE8hZE', title: 'Kachikachicha', artist: 'Coro Arpegio' },
+  { id: 3, youtubeId: 'mF25iEGUmNc', title: 'Kachikachicha', artist: 'Ualberto Apaza', startTime: 38},
   { id: 4, youtubeId: 'UquwGwUv4Oc', title: 'Ananau', artist: 'Alborada' },
   { id: 5, youtubeId: '1C-G0q_2T7g', title: 'Kaypachamanta', artist: 'Liberato Kani' },
 ];
