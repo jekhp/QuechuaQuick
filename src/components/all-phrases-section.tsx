@@ -19,16 +19,14 @@ export default function AllPhrasesSection() {
     if (category === 'Saludos') return t.filterGreetings;
     if (category === 'Comida') return t.filterFood;
     if (category === 'Cortesía') return t.filterCourtesy;
+    if (category === 'Familia') return t.filterFamily;
+    if (category === 'Colores') return t.filterColors;
     if (category === 'General') return t.filterGeneral;
     return category;
   });
 
-  const handleFilterClick = (englishCategory: string) => {
-    if (englishCategory === 'All') {
-      setActiveFilter('Todo');
-    } else {
-      setActiveFilter(englishCategory);
-    }
+  const handleFilterClick = (category: string) => {
+    setActiveFilter(category);
   }
 
 

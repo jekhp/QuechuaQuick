@@ -27,6 +27,8 @@ export const translations = {
       filterFood: 'Food',
       filterCourtesy: 'Courtesy',
       filterGeneral: 'General',
+      filterFamily: 'Family',
+      filterColors: 'Colors',
       noPhrases: 'No phrases found. Try another category.',
     },
     music: {
@@ -73,6 +75,8 @@ export const translations = {
       filterFood: 'Comida',
       filterCourtesy: 'Cortesía',
       filterGeneral: 'General',
+      filterFamily: 'Familia',
+      filterColors: 'Colores',
       noPhrases: 'No se encontraron frases. Prueba otra categoría.',
     },
     music: {
