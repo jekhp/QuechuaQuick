@@ -3,7 +3,7 @@
     {
       "id": "hero",
       "description": "A tourist guinea pig in the Andes",
-      "imageUrl": "/cuyTurista.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1676331491308-b741c863b3ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z3VpbmVhJTIwcGlnJTIwdG91cmlzdHxlbnwwfHx8fDE3NjUyOTg0NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "guinea pig tourist"
     }
   ]

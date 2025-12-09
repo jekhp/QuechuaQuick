@@ -28,8 +28,7 @@ export default function Hero() {
               alt={t.imageAlt}
               fill
               className="object-cover"
-              priority
-              data-ai-hint="andean landscape"
+              data-ai-hint="guinea pig tourist"
             />
              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-none"></div>
           </div>
