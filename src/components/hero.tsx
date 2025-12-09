@@ -10,9 +10,6 @@ export default function Hero() {
   const { language } = useLanguage();
   const t = translations[language].hero;
 
-  // ¡Prueba para depurar! Esto mostrará la ruta de la imagen en la consola de tu navegador.
-  console.log('Intentando cargar la imagen del héroe desde:', heroImage);
-
   return (
     <section className="w-full">
       <div className="container mx-auto max-w-7xl px-4 md:px-6">
