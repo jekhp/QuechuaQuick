@@ -1,6 +1,6 @@
 export type Phrase = {
   id: number;
-  category: 'Saludos' | 'Comida' | 'Cortesía' | 'General' |'Familia' | 'Colores';
+  category: 'Saludos' | 'Comida' | 'Cortesía' | 'General' |'Familia' | 'Colores' |'Numeros'|'Animales';
   emoji: string;
   quechua: string;
   pronunciation: string;
@@ -12,31 +12,74 @@ export type Phrase = {
 };
 
 export const phrases: Phrase[] = [
+  // --- SALUDOS (existentes) ---
   { id: 1, category: 'Saludos', emoji: '👋', quechua: 'Allillanchu', pronunciation: 'a-lli-llan-chu', translation: { es: '¿Cómo estás?', en: 'How are you?' }, audioSrc: '/audio/audio1.mp3' },
   { id: 2, category: 'Saludos', emoji: '😊', quechua: 'Allillanmi', pronunciation: 'a-lli-llan-mi', translation: { es: 'Estoy bien', en: 'I am well' }, audioSrc: '/audio/allillami.mp3' },
   { id: 3, category: 'Saludos', emoji: '🙏', quechua: 'Rimaykullayki', pronunciation: 'ri-may-ku-llay-ki', translation: { es: 'Disculpa / Permiso', en: 'Excuse me / Permission' }, audioSrc: '/audio/rimaykullayki.mp3' },
   { id: 5, category: 'Saludos', emoji: '🤝', quechua: 'Tupananchiskama', pronunciation: 'tu-pa-nan-chis-ka-ma', translation: { es: 'Hasta luego', en: 'See you later' }, audioSrc: '/audio/tupananchiskama.mp3' },
-  { id: 8, category: 'Saludos', emoji: '🤝', quechua: 'Allin Tuta', pronunciation: 'a-llin su-kja', translation: { es: 'Buenas Noches', en: 'Good Evening' }, audioSrc: '/audio/allinTuta.mp3' },
+  { id: 8, category: 'Saludos', emoji: '🤝', quechua: 'Allin Tuta', pronunciation: 'a-llin tu-ta', translation: { es: 'Buenas Noches', en: 'Good Evening' }, audioSrc: '/audio/allinTuta.mp3' },
+  { id: 19, category: 'Saludos', emoji: '❓', quechua: '¿Imaynallan?', pronunciation: 'i-mai-na-llan', translation: { es: '¿Cómo estás?', en: 'How are you?' }, audioSrc: '/audio/imaynallan.mp3' },
+  { id: 20, category: 'Saludos', emoji: '☀️', quechua: 'Allin p\'unchay', pronunciation: 'a-llin Pun-chai', translation: { es: 'Buen día', en: 'Good day' }, audioSrc: '/audio/allin-punchay.mp3' },
+  { id: 21, category: 'Saludos', emoji: '🤝', quechua: 'Allin Sukha', pronunciation: 'a-llin su-kja', translation: { es: 'Buenas Tardes', en: 'Good afternoons' }, audioSrc: '/audio/allinSukha.mp3' },
+  
+  // --- COMIDA (existentes) ---
   { id: 6, category: 'Comida', emoji: '🍲', quechua: 'Mijuy', pronunciation: 'mi-jui', translation: { es: 'Comida', en: 'Food' }, audioSrc: '/audio/mikuy.mp3' },
   { id: 7, category: 'Comida', emoji: '💧', quechua: 'Unu', pronunciation: 'u-nu', translation: { es: 'Agua', en: 'Water' }, audioSrc: '/audio/unu.mp3' },
   { id: 9, category: 'Comida', emoji: '💰', quechua: 'Hayk\'an?', pronunciation: 'jai-kan', translation: { es: '¿Cuánto es?', en: 'How much is it?' }, audioSrc: '/audio/haykan.mp3' },
+
+  // --- CORTESÍA (existentes) ---
   { id: 10, category: 'Cortesía', emoji: '😍', quechua: 'Sumaq', pronunciation: 'su-mak', translation: { es: 'Delicioso', en: 'Delicious' }, audioSrc: '/audio/sumaq.mp3' },
   { id: 11, category: 'Cortesía', emoji: '💪', quechua: 'Atiq', pronunciation: 'a-tik', translation: { es: 'Valiente / Fuerte', en: 'Brave / Strong' }, audioSrc: '/audio/atiq.mp3' },
   { id: 12, category: 'Cortesía', emoji: '😄', quechua: 'Kusi', pronunciation: 'ku-si', translation: { es: 'Feliz / Alegre', en: 'Happy / Joyful' }, audioSrc: '/audio/kusi.mp3' },
   { id: 13, category: 'Cortesía', emoji: '❤️', quechua: 'Munay', pronunciation: 'mu-nai', translation: { es: 'Hermnosa/ hermoso', en: 'Cute/beautiful' }, audioSrc: '/audio/munay.mp3' },
+
+  // --- GENERAL (existentes) ---
   { id: 14, category: 'General', emoji: '📍', quechua: '¿Maypin?', pronunciation: 'mai-pin', translation: { es: '¿Dónde está?', en: "Where is it?" }, audioSrc: '/audio/maypin.mp3' },
   { id: 15, category: 'General', emoji: '🆘', quechua: 'Yanapaway', pronunciation: 'ya-na-pa-wai', translation: { es: 'Ayúdame', en: 'Help me' }, audioSrc: '/audio/yanapaway.mp3' },
   { id: 16, category: 'General', emoji: '🤔', quechua: 'Manan', pronunciation: 'Ma-nan', translation: { es: 'No', en: "No" }, audioSrc: '/audio/manan-hapinichu.mp3' },
   { id: 17, category: 'General', emoji: '👍', quechua: 'Ari', pronunciation: 'a-Ri', translation: { es: 'Sí', en: 'Yes' }, audioSrc: '/audio/ari.mp3' },
   { id: 18, category: 'General', emoji: '👎', quechua: 'Manan', pronunciation: 'Ma-nan', translation: { es: 'No', en: 'No' }, audioSrc: '/audio/manan.mp3' },
-  { id: 19, category: 'Saludos', emoji: '❓', quechua: '¿Imaynallan?', pronunciation: 'i-mai-na-llan', translation: { es: '¿Cómo estás?', en: 'How are you?' }, audioSrc: '/audio/imaynallan.mp3' },
-  { id: 20, category: 'Saludos', emoji: '☀️', quechua: 'Allin p\'unchay', pronunciation: 'a-llin Pun-chai', translation: { es: 'Buen día', en: 'Good day' }, audioSrc: '/audio/allin-punchay.mp3' },
-  { id: 21, category: 'Saludos', emoji: '🤝', quechua: 'Allin Sukha', pronunciation: 'a-llin su-kja', translation: { es: 'Buenas Tardes', en: 'Good afternoons' }, audioSrc: '/audio/allinSukha.mp3' },
-  { id: 22, category: 'Familia', emoji: '🤝', quechua: 'Taytay', pronunciation: 'tai-tai', translation: { es: 'Papá', en: 'Father' }, audioSrc: '/audio/taytay.mp3' },
-  { id: 23, category: 'Familia', emoji: '🤝', quechua: 'Mamay', pronunciation: 'ma-mai', translation: { es: 'Mamá', en: 'Mother' }, audioSrc: '/audio/mamay.mp3' },
-  { id: 24, category: 'Colores', emoji: '🤝', quechua: 'Puka', pronunciation: 'pu-ka', translation: { es: 'Rojo', en: 'Red' }, audioSrc: '/audio/puka.mp3' },
-  { id: 25, category: 'Colores', emoji: '🤝', quechua: 'Q\'ello', pronunciation: 'qe-llo', translation: { es: 'Amarillo', en: 'Yellow' }, audioSrc: '/audio/qello.mp3' },
 
+  // --- FAMILIA (existentes + ampliados) ---
+  { id: 22, category: 'Familia', emoji: '👨', quechua: 'Taytay', pronunciation: 'tai-tai', translation: { es: 'Papá', en: 'Father' }, audioSrc: '/audio/taytay.mp3' },
+  { id: 23, category: 'Familia', emoji: '👩', quechua: 'Mamay', pronunciation: 'ma-mai', translation: { es: 'Mamá', en: 'Mother' }, audioSrc: '/audio/mamay.mp3' },
+  { id: 26, category: 'Familia', emoji: '👦', quechua: 'Churi', pronunciation: 'chu-ri', translation: { es: 'Hijo (dicho por el padre)', en: 'Son (said by father)' }, audioSrc: '/audio/churi.mp3' },
+  { id: 27, category: 'Familia', emoji: '👧', quechua: 'Ususi', pronunciation: 'u-su-si', translation: { es: 'Hija (dicho por el padre)', en: 'Daughter (said by father)' }, audioSrc: '/audio/ususi.mp3' },
+  { id: 28, category: 'Familia', emoji: '👶', quechua: 'Wawa', pronunciation: 'wa-wa', translation: { es: 'Bebé / Niño/a', en: 'Baby / Child' }, audioSrc: '/audio/wawa.mp3' },
+  { id: 29, category: 'Familia', emoji: '👴', quechua: 'Awki', pronunciation: 'au-ki', translation: { es: 'Abuelo', en: 'Grandfather' }, audioSrc: '/audio/awki.mp3' },
+  { id: 30, category: 'Familia', emoji: '👵', quechua: 'Paytullu', pronunciation: 'pai-tu-llu', translation: { es: 'Abuela', en: 'Grandmother' }, audioSrc: '/audio/paytullu.mp3' },
+  { id: 36, category: 'Familia', emoji: '🧑', quechua: 'Wayqey', pronunciation: 'wai-qei', translation: { es: 'Hermano (entre hombres)', en: 'Brother (man to man)' }, audioSrc: '/audio/wayqey.mp3' },
+  { id: 37, category: 'Familia', emoji: '👭', quechua: 'Ñaña', pronunciation: 'ña-ña', translation: { es: 'Hermana (entre mujeres)', en: 'Sister (woman to woman)' }, audioSrc: '/audio/ñaña.mp3' },
+  { id: 38, category: 'Familia', emoji: '🧑‍🤝‍🧑', quechua: 'Panay', pronunciation: 'pa-nai', translation: { es: 'Hermana (dicho por el hombre)', en: 'Sister (said by man)' }, audioSrc: '/audio/panay.mp3' },
+  { id: 39, category: 'Familia', emoji: '🧑‍🤝‍🧑', quechua: 'Tura', pronunciation: 'tu-ra', translation: { es: 'Hermano (dicho por la mujer)', en: 'Brother (said by woman)' }, audioSrc: '/audio/tura.mp3' },
+
+  // --- COLORES (existentes + ampliados) ---
+  { id: 24, category: 'Colores', emoji: '🔴', quechua: 'Puka', pronunciation: 'pu-ka', translation: { es: 'Rojo', en: 'Red' }, audioSrc: '/audio/puka.mp3' },
+  { id: 25, category: 'Colores', emoji: '🟡', quechua: 'Q\'ello', pronunciation: 'qe-llo', translation: { es: 'Amarillo', en: 'Yellow' }, audioSrc: '/audio/qello.mp3' },
+  { id: 31, category: 'Colores', emoji: '⚫', quechua: 'Yana', pronunciation: 'ya-na', translation: { es: 'Negro', en: 'Black' }, audioSrc: '/audio/yana.mp3' },
+  { id: 32, category: 'Colores', emoji: '⚪', quechua: 'Yuraq', pronunciation: 'yu-rak', translation: { es: 'Blanco', en: 'White' }, audioSrc: '/audio/yuraq.mp3' },
+  { id: 33, category: 'Colores', emoji: '🔵', quechua: 'Anqas', pronunciation: 'an-kas', translation: { es: 'Azul', en: 'Blue' }, audioSrc: '/audio/anqas.mp3' },
+  { id: 34, category: 'Colores', emoji: '🟢', quechua: 'Q\'umir', pronunciation: 'ku-mir', translation: { es: 'Verde', en: 'Green' }, audioSrc: '/audio/qumir.mp3' },
+  { id: 35, category: 'Colores', emoji: '🟤', quechua: 'Oq\'e', pronunciation: 'o-qe', translation: { es: 'Marrón / Plomo', en: 'Brown / Grey' }, audioSrc: '/audio/oqhe.mp3' },
+  { id: 40, category: 'Colores', emoji: '🟣', quechua: 'Kulli', pronunciation: 'ku-lli', translation: { es: 'Morado', en: 'Purple' }, audioSrc: '/audio/kulli.mp3' },
+
+  // --- NÚMEROS (Nuevos) ---
+  { id: 41, category: 'Numeros', emoji: '1️⃣', quechua: 'Huk', pronunciation: 'huk', translation: { es: 'Uno', en: 'One' }, audioSrc: '/audio/huk.mp3' },
+  { id: 42, category: 'Numeros', emoji: '2️⃣', quechua: 'Iskay', pronunciation: 'is-kai', translation: { es: 'Dos', en: 'Two' }, audioSrc: '/audio/iskay.mp3' },
+  { id: 43, category: 'Numeros', emoji: '3️⃣', quechua: 'Kinsa', pronunciation: 'kin-sa', translation: { es: 'Tres', en: 'Three' }, audioSrc: '/audio/kinsa.mp3' },
+  { id: 44, category: 'Numeros', emoji: '4️⃣', quechua: 'Tawa', pronunciation: 'ta-wa', translation: { es: 'Cuatro', en: 'Four' }, audioSrc: '/audio/tawa.mp3' },
+  { id: 45, category: 'Numeros', emoji: '5️⃣', quechua: 'Pichqa', pronunciation: 'pich-qa', translation: { es: 'Cinco', en: 'Five' }, audioSrc: '/audio/pichqa.mp3' },
+  { id: 46, category: 'Numeros', emoji: '🔟', quechua: 'Chunka', pronunciation: 'chun-ka', translation: { es: 'Diez', en: 'Ten' }, audioSrc: '/audio/chunka.mp3' },
+
+  // --- ANIMALES (Nuevos) ---
+  { id: 47, category: 'Animales', emoji: '🐕', quechua: 'Allqo', pronunciation: 'all-qo', translation: { es: 'Perro', en: 'Dog' }, audioSrc: '/audio/allqo.mp3' },
+  { id: 48, category: 'Animales', emoji: '🐈', quechua: 'Misi', pronunciation: 'mi-si', translation: { es: 'Gato', en: 'Cat' }, audioSrc: '/audio/misi.mp3' },
+  { id: 49, category: 'Animales', emoji: '🐴', quechua: 'Kawallu', pronunciation: 'ka-wa-llu', translation: { es: 'Caballo', en: 'Horse' }, audioSrc: '/audio/kawallu.mp3' },
+
+  // --- CORTESÍA / GENERAL ADICIONAL (Nuevos) ---
+  { id: 4, category: 'General', emoji: '❓', quechua: '¿Imataq sutiyki?', pronunciation: 'i-ma-tak su-ti-i-ki', translation: { es: '¿Cuál es tu nombre?', en: 'What is your name?' }, audioSrc: '/audio/imataqsutiyki.mp3' },
+  { id: 50, category: 'Cortesía', emoji: '🙏', quechua: 'Sulpayki', pronunciation: 'sul-pai-ki', translation: { es: 'Gracias', en: 'Thank you' }, audioSrc: '/audio/sulpayki.mp3' },
+  { id: 51, category: 'Cortesía', emoji: '😅', quechua: 'Ama hinachu kay', pronunciation: 'a-ma hi-na-chu kai', translation: { es: 'Por favor', en: 'Please' }, audioSrc: '/audio/amahinachukay.mp3' },
 ];
 
 export const phraseCategories = ['Todo', ...Array.from(new Set(phrases.map(p => p.category)))];
@@ -57,5 +100,5 @@ export const musicVideos: MusicVideo[] = [
   { id: 3, youtubeId: 'mF25iEGUmNc', title: 'Kachikachicha', artist: 'Ualberto Apaza', languages: 'Quechua', startTime: 38},
   { id: 4, youtubeId: 'RoVutuzlJS8', title: 'Ananau', artist: 'Alborada', languages: 'Quechua' },
   { id: 5, youtubeId: 'iaPMyWQz6cQ', title: 'Zisary Lucero', artist: 'Alborada', languages: 'Quechua' },
-  { id: 6, youtubeId: 'AMKr90k6HeA', title: 'TusuyKusun', artist: 'Damaris', languages: 'Quechua & Español', startTime: 10 },
+  { id: 6, youtubeId: 'AMKr90k6HeA', title: 'TusuyKusun', artist: 'Damaris', languages: 'Quechua/Español', startTime: 10 },
 ];

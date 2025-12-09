@@ -29,6 +29,8 @@ export const translations = {
       filterGeneral: 'General',
       filterFamily: 'Family',
       filterColors: 'Colors',
+      filterNumbers: 'Numbers',
+      filterAnimals: 'Animals',
       noPhrases: 'No phrases found. Try another category.',
     },
     music: {
@@ -77,6 +79,8 @@ export const translations = {
       filterGeneral: 'General',
       filterFamily: 'Familia',
       filterColors: 'Colores',
+      filterNumbers: 'Números',
+      filterAnimals: 'Animales',
       noPhrases: 'No se encontraron frases. Prueba otra categoría.',
     },
     music: {

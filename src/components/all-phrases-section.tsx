@@ -22,6 +22,8 @@ export default function AllPhrasesSection() {
     if (category === 'Familia') return t.filterFamily;
     if (category === 'Colores') return t.filterColors;
     if (category === 'General') return t.filterGeneral;
+    if (category === 'Numeros') return t.filterNumbers;
+    if (category === 'Animales') return t.filterAnimals;
     return category;
   });
 
