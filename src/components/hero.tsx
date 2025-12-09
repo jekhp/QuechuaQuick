@@ -22,11 +22,12 @@ export default function Hero() {
               {t.subtitle}
             </p>
           </div>
-          <div className="relative h-64 w-full overflow-hidden rounded-xl md:h-96 lg:h-[400px]">
+          <div className="relative mx-auto aspect-[4/3] w-full max-w-md overflow-hidden rounded-xl lg:aspect-square lg:max-w-none">
             <Image
               src={heroImage}
               alt={t.imageAlt}
-              fill
+              width={1080}
+              height={810}
               className="object-cover"
               data-ai-hint="guinea pig tourist"
             />
