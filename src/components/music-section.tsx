@@ -52,7 +52,7 @@ export default function MusicSection() {
                         <PlayCircle className="h-16 w-16 text-white/80" />
                       </div>
                       <Badge className="absolute top-2 right-2 border-transparent bg-accent text-accent-foreground">
-                        QUECHUA
+                        {video.languages}
                       </Badge>
                     </CardContent>
                     <div className="p-4">
