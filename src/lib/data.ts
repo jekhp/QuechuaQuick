@@ -92,6 +92,7 @@ export type MusicVideo = {
   artist: string;
   languages: string;
   startTime?: number;
+  endTime?: number;
 };
 
 export const musicVideos: MusicVideo[] = [
@@ -101,4 +102,39 @@ export const musicVideos: MusicVideo[] = [
   { id: 4, youtubeId: 'RoVutuzlJS8', title: 'Ananau', artist: 'Alborada', languages: 'Quechua' },
   { id: 5, youtubeId: 'iaPMyWQz6cQ', title: 'Zisary Lucero', artist: 'Alborada', languages: 'Quechua' },
   { id: 6, youtubeId: 'AMKr90k6HeA', title: 'TusuyKusun', artist: 'Damaris', languages: 'Quechua/Español', startTime: 10 },
+  { id: 7, youtubeId: 'y9tUqjRcuQY', title: 'Sikinanay', artist: 'Grupo Ocobamba', languages: 'Quechua/Español', startTime: 19 },
+  { id: 8, youtubeId: 'TIesiNvurvM', title: 'Siqracha', artist: 'Afinación Diablo', languages: 'Quechua', startTime: 19 },
+  { id: 9, youtubeId: '7VZkR-4ZAVA', title: 'Me tienes loca', artist: 'Grupo Ocobamba', languages: 'Quechua/Español', startTime: 17 },
+  { id: 10, youtubeId: '8KvzZpS4E70', title: 'Enfermera', artist: 'Porfirio Ayvar', languages: 'Quechua', startTime: 33 },
+  { id: 11, youtubeId: '7dci-GAE550', title: 'Carnaval Chunbivilcano', artist: 'Veronica Ccompi', languages: 'Quechua', startTime: 47},
+  { id: 12, youtubeId: '2L_GlRfefWU', title: 'Chaska Ñawi Niñucha', artist: 'K\'ana wawakunas', languages: 'Quechua'},
+  { id: 13, youtubeId: 'ziLjYCCo4WM', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua'},
+  { id: 14, youtubeId: '0vHusNucTOY', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua'},
+  { id: 15, youtubeId: 'jdWbtJYpCUM', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 20},
+  { id: 16, youtubeId: '1ZDmvAy9JEs', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 20},
+  { id: 17, youtubeId: 'MQ3z-pIwxmQ', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 20},
+  { id: 18, youtubeId: 'wpIrEmUWL9Q', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 20},
+  { id: 19, youtubeId: '7a8a0Jzf00M', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 30},
+  { id: 20, youtubeId: '_JwzS6_V_W0', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 30},
+  { id: 21, youtubeId: '-GtToBsC3GE', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 30},
+  { id: 22, youtubeId: 'GcWmgKH8A5Y', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 30},
+  { id: 23, youtubeId: 'R3nVncDD8VY', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 30},
+  { id: 24, youtubeId: 'fpUeQO151Vw', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 30},
+  { id: 25, youtubeId: 'ggnoG5S_VNU', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 30},
+  { id: 26, youtubeId: 'JwHnXCBjrMU', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 30},
+  { id: 27, youtubeId: 'crJdcHcKbgM', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 30},
+  { id: 28, youtubeId: 'MDazdh7FGMw', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 30},
+  { id: 29, youtubeId: 'J4FZ9Tpeuqg', title: 'Chata Chata', artist: 'Yeritza Corazon', languages: 'Quechua',startTime: 50},
+  { id: 30, youtubeId: 'c6pJ7C9ioOs', title: 'Chata Chata', artist: 'GUALBERTO APAZA', languages: 'Quechua',startTime: 20},
+  { id: 31, youtubeId: '9u7pcM7e9D8', title: 'Chata Chata', artist: 'GUALBERTO APAZA', languages: 'Quechua',startTime: 20},
+  { id: 32, youtubeId: 'R1HhY5XIeF4', title: 'AY URPICHAY URPI', artist: 'GUALBERTO APAZA', languages: 'Quechua',startTime: 20},
+  { id: 33, youtubeId: 'TY3onzxrV1E', title: 'MI DESPEDIDA', artist: 'GUALBERTO APAZA', languages: 'Quechua',startTime: 20},
+  { id: 34, youtubeId: 'fmx_x2rwMIQ', title: 'SUEGRA MALDITA', artist: 'GUALBERTO APAZA', languages: 'Quechua/Español',startTime: 20},
+  { id: 35, youtubeId: 'SNRif7ujbBM', title: 'MARIACHA', artist: 'GUALBERTO APAZA', languages: 'Quechua',startTime: 20},
+  { id: 36, youtubeId: 'WMNOllvIFnE', title: 'AVIONCHA', artist: 'GUALBERTO APAZA', languages: 'Quechua',startTime: 20},
+  { id: 37, youtubeId: 'hQcIwmtJ1cY', title: 'SIRENITA', artist: 'GUALBERTO APAZA', languages: 'Quechual',startTime: 20},
+  { id: 38, youtubeId: 'd8g6x-SGQVU', title: 'BORRACHO', artist: 'GUALBERTO APAZA', languages: 'Quechua',startTime: 20},
+  { id: 39, youtubeId: 'xWQMXx6nkco', title: 'VERDE VIOLETA', artist: 'GUALBERTO APAZA', languages: 'Quechua',startTime: 20},
+  { id: 40, youtubeId: 'adxbfuFiDb4', title: 'Soltera Warmi', artist: 'Gato Del Arpa', languages: 'Quechua',startTime: 20},
+  { id: 41, youtubeId: 'FBbd2Jqgidg', title: 'Chiririnkacha', artist: 'Gato Del Arpa', languages: 'Quechua',startTime: 20},
 ];
