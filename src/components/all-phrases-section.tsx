@@ -1,40 +1,43 @@
 'use client';
 
-import { useState } from 'react';
 import { phrases, phraseCategories } from '@/lib/data';
 import PhraseCard from '@/components/phrase-card';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import { AnimatePresence, motion } from 'framer-motion';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/language-context';
 import { translations } from '@/lib/translations';
 
 export default function AllPhrasesSection() {
-  const [activeFilter, setActiveFilter] = useState('Todo');
   const { language } = useLanguage();
   const t = translations[language].allPhrases;
 
-  const translatedCategories = phraseCategories.map(category => {
-    if (category === 'Todo') return t.filterAll;
-    if (category === 'Saludos') return t.filterGreetings;
-    if (category === 'Comida') return t.filterFood;
-    if (category === 'Cortesía') return t.filterCourtesy;
-    if (category === 'Familia') return t.filterFamily;
-    if (category === 'Colores') return t.filterColors;
-    if (category === 'General') return t.filterGeneral;
-    if (category === 'Numeros') return t.filterNumbers;
-    if (category === 'Animales') return t.filterAnimals;
-    return category;
-  });
+  const categories = phraseCategories.filter(c => c !== 'Todo');
 
-  const handleFilterClick = (category: string) => {
-    setActiveFilter(category);
+  const getTranslatedCategory = (category: string) => {
+    const key = `filter${category}` as keyof typeof t;
+    if (key in t) {
+      return t[key];
+    }
+    return category;
   }
 
-
-  const filteredPhrases = activeFilter === 'Todo'
-    ? phrases
-    : phrases.filter(p => p.category === activeFilter);
+  const getEmojiForCategory = (category: string): string => {
+    switch (category) {
+      case 'Saludos': return '👋';
+      case 'Comida': return '🍲';
+      case 'Cortesía': return '🙏';
+      case 'Familia': return '👨‍👩‍👧‍👦';
+      case 'Colores': return '🎨';
+      case 'General': return '🗣️';
+      case 'Numeros': return '🔢';
+      case 'Animales': return '🐾';
+      default: return '📜';
+    }
+  }
 
   return (
     <section id="phrases" className="w-full py-12 md:py-20 lg:py-24 bg-background/95">
@@ -48,45 +51,29 @@ export default function AllPhrasesSection() {
               {t.subtitle}
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-6">
-            {phraseCategories.map((category, index) => (
-              <Button
-                key={category}
-                variant="outline"
-                className={cn(
-                  'rounded-full border-2 transition-all',
-                  activeFilter === category
-                    ? 'bg-accent text-accent-foreground border-accent hover:bg-accent/90'
-                    : 'bg-transparent text-foreground hover:bg-accent/10 hover:border-accent'
-                )}
-                onClick={() => handleFilterClick(category)}
-              >
-                {translatedCategories[index]}
-              </Button>
-            ))}
-          </div>
         </div>
-        <div className="mx-auto mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          <AnimatePresence>
-            {filteredPhrases.length > 0 ? (
-              filteredPhrases.map((phrase, index) => (
-                <motion.div
-                  key={phrase.id}
-                  layout
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.2, delay: index * 0.05 }}
-                >
-                  <PhraseCard phrase={phrase} />
-                </motion.div>
-              ))
-            ) : (
-              <div className="col-span-full text-center text-muted-foreground py-10">
-                <p>{t.noPhrases}</p>
-              </div>
-            )}
-          </AnimatePresence>
+        <div className="mx-auto mt-12 max-w-4xl">
+          <Accordion type="single" collapsible className="w-full">
+            {categories.map((category) => (
+              <AccordionItem value={category} key={category}>
+                <AccordionTrigger className="text-xl font-semibold hover:no-underline">
+                  <div className="flex items-center gap-4">
+                    <span className="text-2xl">{getEmojiForCategory(category)}</span>
+                    {getTranslatedCategory(category)}
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="pt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    {phrases
+                      .filter(p => p.category === category)
+                      .map((phrase) => (
+                        <PhraseCard key={phrase.id} phrase={phrase} />
+                      ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

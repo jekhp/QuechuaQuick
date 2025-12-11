@@ -102,7 +102,7 @@ export const musicVideos: MusicVideo[] = [
   { id: 4, youtubeId: 'RoVutuzlJS8', title: 'Ananau', artist: 'Alborada', languages: 'Quechua' },
   { id: 5, youtubeId: 'iaPMyWQz6cQ', title: 'Zisary Lucero', artist: 'Alborada', languages: 'Quechua' },
   { id: 6, youtubeId: 'AMKr90k6HeA', title: 'TusuyKusun', artist: 'Damaris', languages: 'Quechua/Español', startTime: 10 },
-  { id: 7, youtubeId: 'y9tUqjRcuQY', title: 'Sikinanay', artist: 'Grupo Ocobamba', languages: 'Quechua/Español', startTime: 19 },
+  { id: 7, youtubeId: 'y9tUqjRcuQY', title: 'Sikinanay', artist: 'Grupo Ocobamba', languages: 'Quechua/Español', startTime: 15 },
   { id: 8, youtubeId: 'TIesiNvurvM', title: 'Siqracha', artist: 'Afinación Diablo', languages: 'Quechua', startTime: 19 },
   { id: 9, youtubeId: '7VZkR-4ZAVA', title: 'Me tienes loca', artist: 'Grupo Ocobamba', languages: 'Quechua/Español', startTime: 17 },
   { id: 10, youtubeId: '8KvzZpS4E70', title: 'Enfermera', artist: 'Porfirio Ayvar', languages: 'Quechua', startTime: 33 },
