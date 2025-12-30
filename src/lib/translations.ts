@@ -11,7 +11,7 @@ export const translations = {
       toggleLanguage: 'Toggle language',
     },
     hero: {
-      title: 'Speak Quechua in 2 minutes',
+      title: 'Do you want to learn some Quechua?',
       subtitle: 'Key phrases to connect with the Andes. Your quick, visual, and auditory guide.',
       imageAlt: 'Andean landscape with smiling people',
     },
@@ -61,7 +61,7 @@ export const translations = {
       toggleLanguage: 'Cambiar idioma',
     },
     hero: {
-      title: 'Habla Quechua en 2 minutos',
+      title: '¿Quieres aprender algo de QUECHUA?',
       subtitle: 'Frases clave para conectar con los Andes. Tu guía rápida, visual y auditiva.',
       imageAlt: 'Paisaje andino con personas sonriendo',
     },
