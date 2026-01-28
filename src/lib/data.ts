@@ -1,3 +1,11 @@
+export type Subtitle = {
+  time: number;
+  text: {
+    es: string;
+    en: string;
+  };
+};
+
 export type Phrase = {
   id: number;
   category: 'Saludos' | 'Comida' | 'Cortesía' | 'General' |'Familia' | 'Colores' |'Numeros'|'Animales';
@@ -93,10 +101,29 @@ export type MusicVideo = {
   languages: string;
   startTime?: number;
   endTime?: number;
+  subtitles?: Subtitle[];
 };
 
 export const musicVideos: MusicVideo[] = [
-  { id: 1, youtubeId: 'viPKKHGdwHQ', title: 'Carnaval Despedida', artist: 'Roger Chino', languages: 'Quechua',startTime: 5},
+  { id: 1, youtubeId: 'viPKKHGdwHQ', title: 'Carnaval Despedida', artist: 'Roger Chino', languages: 'Quechua',startTime: 5, subtitles: [
+      { time: 20, text: { es: 'Ay, carnaval, carnaval', en: 'Oh, carnival, carnival' } },
+      { time: 23, text: { es: 'hermoso carnaval', en: 'beautiful carnival' } },
+      { time: 26, text: { es: 'para bailar, para gozar', en: 'for dancing, for enjoying' } },
+      { time: 30, text: { es: 'con todititos mis amigos', en: 'with all my friends' } },
+      { time: 34, text: { es: 'Ay, carnaval, carnaval', en: 'Oh, carnival, carnival' } },
+      { time: 37, text: { es: 'hermoso carnaval', en: 'beautiful carnival' } },
+      { time: 40, text: { es: 'para bailar, para gozar', en: 'for dancing, for enjoying' } },
+      { time: 44, text: { es: 'con todititos mis amores', en: 'with all my loves' } },
+      { time: 48, text: { es: 'En la esquinita me has esperado', en: 'You waited for me on the corner' } },
+      { time: 51, text: { es: 'para decirme que ya te vas', en: 'to tell me you are leaving' } },
+      { time: 55, text: { es: 'para decirme que ya te marchas', en: 'to tell me you are going away' } },
+      { time: 58, text: { es: 'chayna kaptinqa pasapullayña', en: 'if so, then just leave' } },
+      { time: 62, text: { es: 'En la esquinita me has esperado', en: 'You waited for me on the corner' } },
+      { time: 66, text: { es: 'para decirme que ya te vas', en: 'to tell me you are leaving' } },
+      { time: 69, text: { es: 'para decirme que ya te marchas', en: 'to tell me you are going away' } },
+      { time: 73, text: { es: 'chayna kaptinqa pasapullayña', en: 'if so, then just leave' } },
+    ]
+  },
   { id: 2, youtubeId: '58NMMld4gsk', title: 'Carnaval Solteritas', artist: 'Yeritza Corazón', languages: 'Quechua/Español',startTime: 5 },
   { id: 3, youtubeId: 'mF25iEGUmNc', title: 'Urpituchata', artist: 'Gualberto Apaza', languages: 'Quechua', startTime: 38},
   { id: 4, youtubeId: 'RoVutuzlJS8', title: 'Ananau', artist: 'Alborada', languages: 'Quechua', startTime: 19},
