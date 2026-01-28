@@ -13,7 +13,7 @@ export const translations = {
     hero: {
       title: 'Do you want to learn some Quechua?',
       subtitle: 'Key phrases to connect with the Andes. Your quick, visual, and auditory guide.',
-      imageAlt: 'Andean landscape with smiling people',
+      imageAlt: 'A tourist guinea pig in the Andes',
     },
     greetings: {
       title: '👋 Greet like a Local',
@@ -36,6 +36,7 @@ export const translations = {
     music: {
       title: '🎵 The Rhythm of the Andes',
       subtitle: 'Immerse yourself in Quechua culture through its music.',
+      scrollHint: 'Swipe to see more songs',
     },
     phraseCard: {
       playAudio: 'Play audio for',
@@ -63,7 +64,7 @@ export const translations = {
     hero: {
       title: '¿Quieres aprender algo de QUECHUA?',
       subtitle: 'Frases clave para conectar con los Andes. Tu guía rápida, visual y auditiva.',
-      imageAlt: 'Paisaje andino con personas sonriendo',
+      imageAlt: 'Un cuy turista en los Andes',
     },
     greetings: {
       title: '👋 Saluda como un Local',
@@ -86,6 +87,7 @@ export const translations = {
     music: {
       title: '🎵 El Ritmo de los Andes',
       subtitle: 'Sumérgete en la cultura quechua a través de su música.',
+      scrollHint: 'Desliza para ver más canciones',
     },
     phraseCard: {
       playAudio: 'Reproducir audio de',

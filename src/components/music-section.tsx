@@ -29,6 +29,9 @@ export default function MusicSection() {
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 {t.subtitle}
               </p>
+              <p className="text-sm text-muted-foreground md:hidden">
+                {t.scrollHint}
+              </p>
             </div>
           </div>
           <div className="mt-12">
@@ -55,6 +58,7 @@ export default function MusicSection() {
                               src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
                               alt={`Thumbnail for ${video.title}`}
                               fill
+                              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                               className="object-cover transition-transform duration-300 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-black/20 transition-all duration-300 group-hover:bg-black/50"></div>
