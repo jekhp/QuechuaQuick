@@ -105,7 +105,7 @@ export type MusicVideo = {
 };
 
 export const musicVideos: MusicVideo[] = [
-  { id: 1, youtubeId: 'viPKKHGdwHQ', title: 'Carnaval Despedida', artist: 'Roger Chino', languages: 'Quechua', startTime: 5, subtitles: [
+  { id: 1, youtubeId: 'viPKKHGdwHQ', title: 'Carnaval Despedida (Sub)', artist: 'Roger Chino', languages: 'Quechua', startTime: 5, subtitles: [
     { time: 48, text: { es: '¿A dónde estás yendo? (bis)', en: 'Where are you going? (repeat)' } },
     { time: 51, text: { es: 'Regresa, hermanita', en: 'Come back, little sister' } },
     { time: 54, text: { es: 'No te vayas (bis)', en: 'Don’t go (repeat)' } },
@@ -121,7 +121,7 @@ export const musicVideos: MusicVideo[] = [
     { time: 81, text: { es: 'Baila, soltera', en: 'Dance, single girl' } },
     { time: 83, text: { es: 'Sin avergonzarce', en: 'Without shame' } },
     { time: 86, text: { es: 'En esta hermosa fiesta', en: 'At this beautiful celebration' } },
-    { time: 88, text: { es: 'Vamos a divertirnos', en: 'Let’s have fun' } },
+    { time: 88, text: { es: 'Vamos a bailar', en: 'Let’s dance' } },
     { time: 90, text: { es: '¿Qué queriendo me estás cantando?', en: 'Why are you singing to me like that?' } },
     { time: 94, text: { es: 'Jovencito caneño', en: 'Young man from Canas' } },
     { time: 96, text: { es: '¿Qué diciendo te me estarás riendo?', en: 'Why are you laughing at me like that?' } },
@@ -179,7 +179,7 @@ export const musicVideos: MusicVideo[] = [
     { time: 263, text: { es: 'Baila, hermanita', en: 'Dance, little sister' } },
     { time: 265, text: { es: 'Toca, hermanito', en: 'Play, little brother' } },
     { time: 267, text: { es: 'En esta hermosa fiesta', en: 'At this beautiful celebration' } },
-    { time: 269, text: { es: 'Vamos a divertirnos', en: 'Let’s have fun' } },
+    { time: 269, text: { es: 'Vamos a bailar', en: 'Let’s dance' } },
     { time: 272, text: { es: 'Charango mañoso', en: 'Mischievous charango' } },
     { time: 274, text: { es: 'Roba corazones', en: 'Heart stealer' } },
     { time: 277, text: { es: 'Tú vas a tocar', en: 'You are going to play' } },
@@ -212,7 +212,7 @@ export const musicVideos: MusicVideo[] = [
   { id: 25, youtubeId: 'ggnoG5S_VNU', title: 'Cuerpo soltero', artist: 'Condemayta de Acomayo', languages: 'Quechua/Español',startTime: 18},
   { id: 26, youtubeId: 'crJdcHcKbgM', title: 'Kaychu Buena vida', artist: 'Afinación Diablo', languages: 'Quechua',startTime: 18},
   { id: 27, youtubeId: 'MDazdh7FGMw', title: 'Ichucha Mana Mamayoc', artist: 'Siwina de Accha', languages: 'Quechua',startTime: 17},
-  { id: 28, youtubeId: 'J4FZ9Tpeuqg', title: 'Cabra Q\'aracha', artist: 'Yeritza Corazón', languages: 'Quechua',startTime: 50},
+  { id: 28, youtubeId: 'J4FZ9Tpeuqg', title: 'Cabra Q\'aracha', artist: 'Gualberto Apaza', languages: 'Quechua',startTime: 50},
   { id: 29, youtubeId: 'c6pJ7C9ioOs', title: 'Sisascha', artist: 'Gualberto Apaza', languages: 'Quechua',startTime: 15},
   { id: 30, youtubeId: '9u7pcM7e9D8', title: 'Qhayna Nihuranki', artist: 'Gualberto Apaza', languages: 'Quechua',startTime: 15},
   { id: 31, youtubeId: 'R1HhY5XIeF4', title: 'AY URPICHAY URPI', artist: 'Gualberto Apaza', languages: 'Quechua',startTime: 15},
@@ -225,5 +225,6 @@ export const musicVideos: MusicVideo[] = [
   { id: 38, youtubeId: 'xWQMXx6nkco', title: 'VERDE VIOLETA', artist: 'Gualberto Apaza', languages: 'Quechua',startTime: 20},
   { id: 39, youtubeId: 'adxbfuFiDb4', title: 'Soltera Warmi', artist: 'Gato Del Arpa', languages: 'Quechua',startTime: 24},
   { id: 40, youtubeId: 'FBbd2Jqgidg', title: 'Chiririnkacha', artist: 'Gato Del Arpa', languages: 'Quechua',startTime: 35},
-  { id: 41, youtubeId: 'PPjg86WxD4s', title: 'Cerveza tomasqay', artist: 'CCASITA RÉCORD', languages: 'Quechua',startTime: 30},
+  { id: 41, youtubeId: 'PPjg86WxD4s', title: 'Cerveza tomasqay', artist: 'Ccasita Record', languages: 'Quechua',startTime: 30},
+  { id: 42, youtubeId: 'TwWlkbM5nPQ', title: 'Chiwillituy', artist: 'Tarpuy Producciones', languages: 'Quechua',startTime: 18},
 ];
