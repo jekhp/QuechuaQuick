@@ -225,4 +225,5 @@ export const musicVideos: MusicVideo[] = [
   { id: 38, youtubeId: 'xWQMXx6nkco', title: 'VERDE VIOLETA', artist: 'Gualberto Apaza', languages: 'Quechua',startTime: 20},
   { id: 39, youtubeId: 'adxbfuFiDb4', title: 'Soltera Warmi', artist: 'Gato Del Arpa', languages: 'Quechua',startTime: 24},
   { id: 40, youtubeId: 'FBbd2Jqgidg', title: 'Chiririnkacha', artist: 'Gato Del Arpa', languages: 'Quechua',startTime: 35},
+  { id: 41, youtubeId: 'PPjg86WxD4s', title: 'Cerveza tomasqay', artist: 'CCASITA RÉCORD', languages: 'Quechua',startTime: 30},
 ];

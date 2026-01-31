@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { musicVideos, type MusicVideo } from '@/lib/data';
 import { Card, CardContent } from '@/components/ui/card';
@@ -14,8 +14,15 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 export default function MusicSection() {
   const [selectedVideo, setSelectedVideo] = useState<MusicVideo | null>(null);
+  const [shuffledVideos, setShuffledVideos] = useState<MusicVideo[]>(musicVideos);
   const { language } = useLanguage();
   const t = translations[language].music;
+
+  useEffect(() => {
+    // Create a shuffled copy of the music videos array on client mount
+    const shuffled = [...musicVideos].sort(() => Math.random() - 0.5);
+    setShuffledVideos(shuffled);
+  }, []);
 
   return (
     <>
@@ -43,7 +50,7 @@ export default function MusicSection() {
               className="w-full"
             >
               <CarouselContent>
-                {musicVideos.map((video) => (
+                {shuffledVideos.map((video) => (
                    <CarouselItem key={video.id} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
                       <div className="p-1">
                         <Card
