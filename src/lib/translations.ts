@@ -101,4 +101,55 @@ export const translations = {
       label: 'Volver arriba',
     }
   },
+  fr: {
+    layout: {
+      title: 'QuechuaQuick | Parlez Quechua en 2 minutes',
+      description: 'Phrases clés pour se connecter avec les Andes. Un guide minimaliste pour les touristes avec phrases utiles, audio et musique.',
+    },
+    header: {
+      phrases: 'Phrases',
+      music: 'Musique',
+      openMenu: 'Ouvrir le menu',
+      toggleLanguage: 'Changer de langue',
+    },
+    hero: {
+      title: 'Voulez-vous apprendre le QUECHUA ?',
+      subtitle: 'Des phrases clés pour se connecter avec les Andes. Votre guide rapide, visuel et auditif.',
+      imageAlt: 'Un cobaye touriste dans les Andes',
+    },
+    greetings: {
+      title: '👋 Saluez comme un local',
+      subtitle: 'Commencez sur le bon pied. Ces cinq salutations ouvriront des portes et des cœurs.',
+    },
+    allPhrases: {
+      title: '🗣️ Des phrases pour chaque occasion',
+      subtitle: 'Filtrez par catégorie et trouvez exactement ce que vous devez dire.',
+      filterAll: 'Tout',
+      filterGreetings: 'Salutations',
+      filterFood: 'Nourriture',
+      filterCourtesy: 'Courtoisie',
+      filterGeneral: 'Général',
+      filterFamily: 'Famille',
+      filterColors: 'Couleurs',
+      filterNumbers: 'Nombres',
+      filterAnimals: 'Animaux',
+      noPhrases: 'Aucune phrase trouvée. Essayez une autre catégorie.',
+    },
+    music: {
+      title: '🎵 Le rythme des Andes',
+      subtitle: 'Plongez dans la culture Quechua à travers sa musique.',
+      scrollHint: 'Glissez pour voir plus de chansons',
+    },
+    phraseCard: {
+      playAudio: 'Jouer l\'audio pour',
+    },
+    audioPlayer: {
+      errorTitle: 'Erreur audio',
+      errorDescription: 'L\'audio n\'est pas disponible pour le moment.',
+      playError: 'Impossible de lire l\'audio.',
+    },
+    scrollToTop: {
+      label: 'Retour en haut',
+    }
+  }
 };

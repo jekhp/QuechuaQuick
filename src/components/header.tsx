@@ -6,7 +6,7 @@ import { Menu, Languages } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { useLanguage } from '@/contexts/language-context';
+import { useLanguage, type Language } from '@/contexts/language-context';
 import { translations } from '@/lib/translations';
 import {
   DropdownMenu,
@@ -32,7 +32,7 @@ export default function Header() {
 
   const closeSheet = () => setSheetOpen(false);
 
-  const handleLanguageChange = (lang: 'en' | 'es') => {
+  const handleLanguageChange = (lang: Language) => {
     setLanguage(lang);
     if(isSheetOpen) closeSheet();
   };
@@ -73,6 +73,9 @@ export default function Header() {
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => handleLanguageChange('en')}>
             English
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => handleLanguageChange('fr')}>
+            Français
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

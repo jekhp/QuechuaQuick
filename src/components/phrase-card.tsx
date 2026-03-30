@@ -20,7 +20,7 @@ export default function PhraseCard({ phrase }: PhraseCardProps) {
   const { language } = useLanguage();
   const t = translations[language].phraseCard;
 
-  const translation = language === 'es' ? phrase.translation.es : phrase.translation.en;
+  const translation = phrase.translation[language];
 
   return (
     <Card className="group flex h-full transform flex-col justify-between text-center transition-all duration-250 ease-out hover:-translate-y-1 hover:shadow-lg motion-reduce:transform-none">

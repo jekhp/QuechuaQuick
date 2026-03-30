@@ -6,7 +6,7 @@ import { Languages } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import type { MusicVideo, Subtitle } from '@/lib/data';
-import { useLanguage } from '@/contexts/language-context';
+import { useLanguage, type Language } from '@/contexts/language-context';
 
 interface VideoModalProps {
   video: MusicVideo | null;
@@ -18,7 +18,7 @@ export default function VideoModal({ video, isOpen, onClose }: VideoModalProps) 
   const { language: globalLanguage } = useLanguage();
   const [player, setPlayer] = useState<YouTubePlayer | null>(null);
   const [activeSubtitle, setActiveSubtitle] = useState<Subtitle | null>(null);
-  const [subtitleLanguage, setSubtitleLanguage] = useState<'es' | 'en'>(globalLanguage);
+  const [subtitleLanguage, setSubtitleLanguage] = useState<Language>(globalLanguage);
   const intervalRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
@@ -46,8 +46,6 @@ export default function VideoModal({ video, isOpen, onClose }: VideoModalProps) 
       
       const currentSubtitle = video?.subtitles?.find((sub, index) => {
         const nextSub = video.subtitles?.[index + 1];
-        // A subtitle is active from its start time until the next one starts.
-        // For the last subtitle, it's active until the end.
         return currentTime >= sub.time && (!nextSub || currentTime < nextSub.time);
       }) || null;
       
@@ -56,7 +54,6 @@ export default function VideoModal({ video, isOpen, onClose }: VideoModalProps) 
   };
 
   useEffect(() => {
-    // Cleanup on unmount
     return stopInterval;
   }, []);
 
@@ -80,6 +77,20 @@ export default function VideoModal({ video, isOpen, onClose }: VideoModalProps) 
   };
 
   const hasSubtitles = video?.subtitles && video.subtitles.length > 0;
+
+  const cycleLanguage = () => {
+    setSubtitleLanguage(prev => {
+      if (prev === 'es') return 'en';
+      if (prev === 'en') return 'fr';
+      return 'es';
+    });
+  };
+
+  const getButtonText = () => {
+    if (subtitleLanguage === 'es') return 'Switch to English';
+    if (subtitleLanguage === 'en') return 'Passer au Français';
+    return 'Cambiar a Español';
+  };
 
   const videoOpts = {
     height: '100%',
@@ -117,9 +128,9 @@ export default function VideoModal({ video, isOpen, onClose }: VideoModalProps) 
           </div>
            {hasSubtitles && (
              <div className="flex justify-center pb-2">
-                <Button variant="ghost" onClick={() => setSubtitleLanguage(lang => lang === 'es' ? 'en' : 'es')}>
+                <Button variant="ghost" onClick={cycleLanguage}>
                     <Languages className="h-5 w-5 mr-2" />
-                    {subtitleLanguage === 'es' ? 'Switch to English' : 'Cambiar a Español'}
+                    {getButtonText()}
                 </Button>
             </div>
           )}
