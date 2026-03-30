@@ -10,6 +10,17 @@ import {
 } from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/language-context';
 import { translations } from '@/lib/translations';
+import { 
+  Hand, 
+  Utensils, 
+  Heart, 
+  Users, 
+  Palette, 
+  MessageSquare, 
+  Hash, 
+  Dog, 
+  BookOpen 
+} from 'lucide-react';
 
 export default function AllPhrasesSection() {
   const { language } = useLanguage();
@@ -25,17 +36,17 @@ export default function AllPhrasesSection() {
     return category;
   }
 
-  const getEmojiForCategory = (category: string): string => {
+  const getIconForCategory = (category: string) => {
     switch (category) {
-      case 'Saludos': return '👋';
-      case 'Comida': return '🍲';
-      case 'Cortesía': return '🙏';
-      case 'Familia': return '👨‍👩‍👧‍👦';
-      case 'Colores': return '🎨';
-      case 'General': return '🗣️';
-      case 'Numeros': return '🔢';
-      case 'Animales': return '🐾';
-      default: return '📜';
+      case 'Saludos': return <Hand className="h-6 w-6 text-primary" />;
+      case 'Comida': return <Utensils className="h-6 w-6 text-primary" />;
+      case 'Cortesía': return <Heart className="h-6 w-6 text-primary" />;
+      case 'Familia': return <Users className="h-6 w-6 text-primary" />;
+      case 'Colores': return <Palette className="h-6 w-6 text-primary" />;
+      case 'General': return <MessageSquare className="h-6 w-6 text-primary" />;
+      case 'Numeros': return <Hash className="h-6 w-6 text-primary" />;
+      case 'Animales': return <Dog className="h-6 w-6 text-primary" />;
+      default: return <BookOpen className="h-6 w-6 text-primary" />;
     }
   }
 
@@ -58,7 +69,7 @@ export default function AllPhrasesSection() {
               <AccordionItem value={category} key={category}>
                 <AccordionTrigger className="text-xl font-semibold hover:no-underline">
                   <div className="flex items-center gap-4">
-                    <span className="text-2xl">{getEmojiForCategory(category)}</span>
+                    {getIconForCategory(category)}
                     {getTranslatedCategory(category)}
                   </div>
                 </AccordionTrigger>

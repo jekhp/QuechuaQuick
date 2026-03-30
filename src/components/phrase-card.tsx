@@ -9,6 +9,7 @@ import AudioWave from './audio-wave';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/contexts/language-context';
 import { translations } from '@/lib/translations';
+import * as LucideIcons from 'lucide-react';
 
 interface PhraseCardProps {
   phrase: Phrase;
@@ -22,10 +23,15 @@ export default function PhraseCard({ phrase }: PhraseCardProps) {
 
   const translation = phrase.translation[language];
 
+  // Dynamically get the icon from lucide-react
+  const IconComponent = (LucideIcons as any)[phrase.iconName] || LucideIcons.HelpCircle;
+
   return (
     <Card className="group flex h-full transform flex-col justify-between text-center transition-all duration-250 ease-out hover:-translate-y-1 hover:shadow-lg motion-reduce:transform-none">
       <CardContent className="flex flex-col items-center justify-center p-6 space-y-3">
-        <div className="text-5xl">{phrase.emoji}</div>
+        <div className="flex items-center justify-center h-16 w-16 text-primary">
+          <IconComponent size={48} strokeWidth={1.5} />
+        </div>
         <div>
           <p className="text-2xl font-bold text-primary font-headline" lang="qu">
             {phrase.quechua}
