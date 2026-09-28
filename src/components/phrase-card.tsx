@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { useAudioPlayer } from '@/contexts/audio-player-context';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -22,45 +23,54 @@ export default function PhraseCard({ phrase }: PhraseCardProps) {
   const t = translations[language].phraseCard;
 
   const translation = phrase.translation[language];
-
-  // Dynamically get the icon from lucide-react
   const IconComponent = (LucideIcons as any)[phrase.iconName] || LucideIcons.HelpCircle;
 
   return (
-    <Card className="group flex h-full transform flex-col justify-between text-center transition-all duration-250 ease-out hover:-translate-y-1 hover:shadow-lg motion-reduce:transform-none">
-      <CardContent className="flex flex-col items-center justify-center p-6 space-y-3">
-        <div className="flex items-center justify-center h-16 w-16 text-primary">
-          <IconComponent size={48} strokeWidth={1.5} />
-        </div>
-        <div>
-          <p className="text-2xl font-bold text-primary font-headline" lang="qu">
-            {phrase.quechua}
+    <motion.div
+      whileHover={{ y: -8 }}
+      whileTap={{ scale: 0.98 }}
+      className="h-full"
+    >
+      <Card className="group flex h-full flex-col justify-between overflow-hidden text-center border-none shadow-lg ring-1 ring-black/5 hover:ring-accent/50 transition-all duration-300 glass-morphism">
+        <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
+          <div className="flex items-center justify-center h-20 w-20 rounded-2xl bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+            <IconComponent size={40} strokeWidth={1.5} />
+          </div>
+          <div className="space-y-2">
+            <h3 className="text-3xl font-bold text-primary tracking-tight" lang="qu">
+              {phrase.quechua}
+            </h3>
+            <p className="text-sm font-medium italic text-accent/80 tracking-wide uppercase">
+              {phrase.pronunciation}
+            </p>
+          </div>
+          <div className="h-px w-12 bg-border group-hover:w-24 transition-all duration-300" />
+          <p className="text-lg font-medium text-foreground/80 leading-relaxed">
+            {translation}
           </p>
-          <p className="text-sm italic text-accent">({phrase.pronunciation})</p>
+        </CardContent>
+        <div className="px-8 pb-8">
+          <Button
+            variant="default"
+            size="icon"
+            className={cn(
+              'h-16 w-16 rounded-full bg-primary text-white shadow-xl hover:shadow-primary/40 transition-all duration-300 active:scale-90',
+              isThisAudioPlaying && 'bg-accent animate-pulse'
+            )}
+            onClick={() => toggleAudio(phrase.audioSrc)}
+            aria-label={`${t.playAudio} ${phrase.quechua}`}
+          >
+            {isThisAudioPlaying ? (
+              <div className="relative flex h-full w-full items-center justify-center">
+                <AudioWave />
+                <Pause className="h-8 w-8 fill-white absolute" />
+              </div>
+            ) : (
+              <Play className="h-8 w-8 fill-white ml-1" />
+            )}
+          </Button>
         </div>
-        <p className="text-base font-semibold text-foreground">{translation}</p>
-      </CardContent>
-      <div className="px-6 pb-6">
-        <Button
-          variant="default"
-          size="icon"
-          className={cn(
-            'h-14 w-14 rounded-full bg-accent text-accent-foreground shadow-md transition-all hover:bg-accent/90 hover:scale-105 active:scale-95',
-            isThisAudioPlaying && 'bg-secondary'
-          )}
-          onClick={() => toggleAudio(phrase.audioSrc)}
-          aria-label={`${t.playAudio} ${phrase.quechua}`}
-        >
-          {isThisAudioPlaying ? (
-            <div className="relative flex h-full w-full items-center justify-center">
-              <AudioWave />
-              <Pause className="h-7 w-7 fill-white text-white absolute" />
-            </div>
-          ) : (
-            <Play className="h-7 w-7 fill-white text-white" />
-          )}
-        </Button>
-      </div>
-    </Card>
+      </Card>
+    </motion.div>
   );
 }
