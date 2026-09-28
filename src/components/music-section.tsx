@@ -7,7 +7,7 @@ import { musicVideos, type MusicVideo } from '@/lib/data';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import VideoModal from './video-modal';
-import { PlayCircle, Music2 } from 'lucide-react';
+import { Play, Music } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { translations } from '@/lib/translations';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -25,78 +25,86 @@ export default function MusicSection() {
 
   return (
     <>
-      <section id="music" className="w-full py-24 bg-slate-50 dark:bg-slate-900/50">
+      <section id="music" className="w-full py-28 bg-slate-50 dark:bg-slate-950/40 border-t border-slate-100 dark:border-slate-900">
         <div className="container mx-auto max-w-7xl px-4 md:px-6">
+          
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center justify-center space-y-4 text-center mb-16"
+            className="flex flex-col items-center justify-center space-y-4 text-center mb-20"
           >
-            <div className="p-3 bg-primary/10 rounded-2xl text-primary mb-2">
-              <Music2 size={32} />
+            <div className="p-3.5 bg-primary/10 text-primary rounded-2xl shadow-sm">
+              <Music size={28} />
             </div>
-            <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+            <h2 className="text-4xl font-black tracking-tight sm:text-5xl md:text-6xl text-slate-950 dark:text-white">
               {t.title}
             </h2>
-            <p className="max-w-[800px] text-muted-foreground text-lg md:text-xl">
+            <p className="max-w-[700px] text-slate-500 dark:text-slate-400 text-lg md:text-xl font-light">
               {t.subtitle}
             </p>
-            <Badge variant="outline" className="md:hidden animate-bounce mt-4">
+            <Badge variant="secondary" className="md:hidden animate-pulse rounded-full px-4 py-1 mt-2">
               {t.scrollHint}
             </Badge>
           </motion.div>
           
-          <div className="relative px-4">
+          <div className="relative px-2">
            <Carousel
               opts={{
                 align: "start",
                 loop: true,
               }}
-              className="w-full"
+              className="w-full group"
             >
               <CarouselContent className="-ml-6">
                 {shuffledVideos.map((video) => (
                    <CarouselItem key={video.id} className="pl-6 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                      <motion.div
-                        whileHover={{ scale: 1.02 }}
-                        className="h-full"
-                      >
+                      <motion.div className="h-full">
                         <Card
-                          className="group h-full overflow-hidden border-none shadow-xl cursor-pointer hover:shadow-primary/20 transition-all duration-500"
+                          className="group/card h-full overflow-hidden rounded-[2rem] border border-slate-100 dark:border-slate-900 shadow-md hover:shadow-xl dark:shadow-2xl/50 bg-white dark:bg-slate-900 cursor-pointer transition-all duration-300"
                           onClick={() => setSelectedVideo(video)}
                           role="button"
                           tabIndex={0}
                         >
-                          <CardContent className="relative aspect-video p-0">
+                          <CardContent className="relative aspect-[16/10] p-0 overflow-hidden">
                             <Image
                               src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
                               alt={video.title}
                               fill
                               sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                              className="object-cover transition-transform duration-700 group-hover:scale-110"
+                              className="object-cover transition-transform duration-700 group-hover/card:scale-105"
                             />
-                            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                              <PlayCircle className="h-16 w-16 text-white/90 group-hover:scale-125 transition-transform duration-300" />
+                            <div className="absolute inset-0 bg-slate-950/20 group-hover/card:bg-slate-950/40 transition-colors duration-300" />
+                            
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
+                              <div className="h-14 w-14 rounded-full bg-white text-slate-950 flex items-center justify-center shadow-2xl scale-75 group-hover/card:scale-100 transition-transform duration-300">
+                                <Play className="h-6 w-6 fill-current ml-0.5" />
+                              </div>
                             </div>
-                            <Badge className="absolute bottom-4 right-4 bg-white/20 backdrop-blur-md text-white border-white/30">
+                            
+                            <Badge className="absolute bottom-4 left-4 bg-slate-900/60 dark:bg-white/20 backdrop-blur-md text-white border-none rounded-full px-3 py-0.5 text-[11px] font-medium tracking-wide">
                               {video.languages}
                             </Badge>
                           </CardContent>
-                          <div className="p-6 bg-white dark:bg-slate-900">
-                            <p className="font-bold text-lg truncate group-hover:text-primary transition-colors">{video.title}</p>
-                            <p className="text-sm text-muted-foreground font-medium">{video.artist}</p>
+                          
+                          <div className="p-6">
+                            <h4 className="font-bold text-lg text-slate-900 dark:text-white truncate group-hover/card:text-primary transition-colors duration-200">
+                              {video.title}
+                            </h4>
+                            <p className="text-sm font-medium text-slate-400 dark:text-slate-500 mt-0.5">
+                              {video.artist}
+                            </p>
                           </div>
                         </Card>
                       </motion.div>
                    </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="hidden sm:flex -left-12" />
-              <CarouselNext className="hidden sm:flex -right-12" />
+              <CarouselPrevious className="hidden md:flex -left-6 opacity-0 group-hover:opacity-100 transition-opacity rounded-full h-12 w-12 bg-white dark:bg-slate-900 shadow-xl border border-slate-200/50 dark:border-slate-800/50 text-slate-900 dark:text-white" />
+              <CarouselNext className="hidden md:flex -right-6 opacity-0 group-hover:opacity-100 transition-opacity rounded-full h-12 w-12 bg-white dark:bg-slate-900 shadow-xl border border-slate-200/50 dark:border-slate-800/50 text-slate-900 dark:text-white" />
             </Carousel>
           </div>
+          
         </div>
       </section>
       <VideoModal
