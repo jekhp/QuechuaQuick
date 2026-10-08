@@ -3,6 +3,7 @@ import { Providers } from '@/components/providers';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 import { LanguageProvider } from '@/contexts/language-context';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'QuechuaQuick | Speak Quechua in 2 minutes',
@@ -24,6 +25,12 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,700;1,400&display=swap"
           rel="stylesheet"
+        />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9208438369660480"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
       </head>
       <body className="font-body antialiased">
