@@ -2,7 +2,7 @@ export const translations = {
   en: {
     layout: {
       title: 'QuechuaQuick | Speak Quechua in 2 minutes',
-      description: 'Key phrases to connect with the Andes. A minimalist cheat sheet for tourists with useful phrases, audio, and music.',
+      description: 'Master essential Quechua phrases for your trip to the Andes. Perfect for experiential tourism, trekking, and cultural connection.',
     },
     header: {
       phrases: 'Phrases',
@@ -11,17 +11,17 @@ export const translations = {
       toggleLanguage: 'Toggle language',
     },
     hero: {
-      title: 'Do you want to learn some Quechua?',
-      subtitle: 'Key phrases to connect with the Andes. Your quick, visual, and auditory guide.',
-      imageAlt: 'A tourist guinea pig in the Andes',
+      title: 'Experience the REAL Andes',
+      subtitle: 'Connect with locals using essential Quechua phrases. Your quick, visual, and auditory travel companion.',
+      imageAlt: 'Experiential tourism in the Andes',
     },
     greetings: {
       title: '👋 Greet like a Local',
-      subtitle: 'Start on the right foot. These five greetings will open doors and hearts.',
+      subtitle: 'Open hearts in the Andes. These essential greetings are your key to the culture.',
     },
     allPhrases: {
-      title: '🗣️ Phrases for Every Occasion',
-      subtitle: 'Filter by category and find just what you need to say.',
+      title: '🗣️ Essential Travel Phrases',
+      subtitle: 'Everyday expressions for markets, restaurants, and mountain adventures.',
       filterAll: 'All',
       filterGreetings: 'Greetings',
       filterFood: 'Food',
@@ -34,8 +34,8 @@ export const translations = {
       noPhrases: 'No phrases found. Try another category.',
     },
     music: {
-      title: '🎵 The Rhythm of the Andes',
-      subtitle: 'Immerse yourself in Quechua culture through its music.',
+      title: '🎵 Andean Soul',
+      subtitle: 'Feel the rhythm of the mountains with authentic Quechua songs.',
       scrollHint: 'Swipe to see more songs',
     },
     phraseCard: {
@@ -53,7 +53,7 @@ export const translations = {
   es: {
     layout: {
       title: 'QuechuaQuick | Habla Quechua en 2 minutos',
-      description: 'Frases clave para conectar con los Andes. Una cheat sheet minimalista para turistas con frases útiles, audio y música.',
+      description: 'Aprende frases clave en Quechua para tu viaje a los Andes. Ideal para turismo vivencial y conexión cultural.',
     },
     header: {
       phrases: 'Frases',
@@ -62,17 +62,17 @@ export const translations = {
       toggleLanguage: 'Cambiar idioma',
     },
     hero: {
-      title: '¿Quieres aprender algo de QUECHUA?',
-      subtitle: 'Frases clave para conectar con los Andes. Tu guía rápida, visual y auditiva.',
-      imageAlt: 'Un cuy turista en los Andes',
+      title: 'Vive los Andes de VERDAD',
+      subtitle: 'Conecta con la gente local usando frases clave en Quechua. Tu guía rápida para el viajero.',
+      imageAlt: 'Turismo vivencial en los Andes',
     },
     greetings: {
       title: '👋 Saluda como un Local',
-      subtitle: 'Empieza con buen pie. Estos cinco saludos te abrirán puertas y corazones.',
+      subtitle: 'Abre corazones en los Andes. Estos saludos esenciales son tu llave a la cultura.',
     },
     allPhrases: {
-      title: '🗣️ Frases para cada Ocasión',
-      subtitle: 'Filtra por categoría y encuentra justo lo que necesitas decir.',
+      title: '🗣️ Frases para el Viajero',
+      subtitle: 'Expresiones cotidianas para mercados, restaurantes y rutas de montaña.',
       filterAll: 'Todo',
       filterGreetings: 'Saludos',
       filterFood: 'Comida',
@@ -86,7 +86,7 @@ export const translations = {
     },
     music: {
       title: '🎵 El Ritmo de los Andes',
-      subtitle: 'Sumérgete en la cultura quechua a través de su música.',
+      subtitle: 'Siente el alma de las montañas con canciones auténticas en Quechua.',
       scrollHint: 'Desliza para ver más canciones',
     },
     phraseCard: {
@@ -104,7 +104,7 @@ export const translations = {
   fr: {
     layout: {
       title: 'QuechuaQuick | Parlez Quechua en 2 minutes',
-      description: 'Phrases clés pour se connecter avec les Andes. Un guide minimaliste pour les touristes avec phrases utiles, audio et musique.',
+      description: 'Maîtrisez les phrases essentielles en Quechua pour votre voyage dans les Andes. Idéal pour le tourisme d\'aventure et la connexion culturelle.',
     },
     header: {
       phrases: 'Phrases',
@@ -113,17 +113,17 @@ export const translations = {
       toggleLanguage: 'Changer de langue',
     },
     hero: {
-      title: 'Voulez-vous apprendre le QUECHUA ?',
-      subtitle: 'Des phrases clés pour se connecter avec les Andes. Votre guide rapide, visuel et auditif.',
-      imageAlt: 'Un cobaye touriste dans les Andes',
+      title: 'Découvrez les Andes AUTHENTIQUES',
+      subtitle: 'Communiquez avec les habitants grâce aux phrases clés en Quechua. Votre compagnon de voyage visuel et auditif.',
+      imageAlt: 'Tourisme d\'expérience dans les Andes',
     },
     greetings: {
       title: '👋 Saluez comme un local',
-      subtitle: 'Commencez sur le bon pied. Ces cinq salutations ouvriront des portes et des cœurs.',
+      subtitle: 'Ouvrez les cœurs dans les Andes. Ces salutations sont votre clé pour la culture.',
     },
     allPhrases: {
-      title: '🗣️ Des phrases pour chaque occasion',
-      subtitle: 'Filtrez par catégorie et trouvez exactement ce que vous devez dire.',
+      title: '🗣️ Phrases de voyage essentielles',
+      subtitle: 'Expressions quotidiennes pour les marchés, les restaurants et les aventures en montagne.',
       filterAll: 'Tout',
       filterGreetings: 'Salutations',
       filterFood: 'Nourriture',
@@ -136,8 +136,8 @@ export const translations = {
       noPhrases: 'Aucune phrase trouvée. Essayez une autre catégorie.',
     },
     music: {
-      title: '🎵 Le rythme des Andes',
-      subtitle: 'Plongez dans la culture Quechua à travers sa musique.',
+      title: '🎵 L\'âme des Andes',
+      subtitle: 'Ressentez le rythme des montagnes avec des chansons authentiques en Quechua.',
       scrollHint: 'Glissez pour voir plus de chansons',
     },
     phraseCard: {
